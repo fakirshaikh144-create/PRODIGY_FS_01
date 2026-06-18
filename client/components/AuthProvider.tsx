@@ -16,7 +16,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
       setToken(t)
 
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
+        const res = await fetch('/api/auth/me', {
           headers: { Authorization: `Bearer ${t}` }
         })
         const data = await res.json()

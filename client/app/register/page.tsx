@@ -18,8 +18,7 @@ export default function RegisterPage() {
     if (!name || !email || !password) return setError('All fields required')
     setLoading(true)
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000'
-      const res = await fetch(`${apiUrl}/api/auth/register`, {
+      const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password })
@@ -33,7 +32,7 @@ export default function RegisterPage() {
       }
       if (!res.ok) throw new Error(data.message || 'Registration failed')
 
-      const loginRes = await fetch(`${apiUrl}/api/auth/login`, {
+      const loginRes = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
