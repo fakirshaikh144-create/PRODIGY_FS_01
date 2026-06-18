@@ -26,7 +26,7 @@ pnpm-debug.log*
 .pnp.js
 
 # dotenv environment variables
-**/.env*
+# (intentionally not ignored — tracked in repo if present)
 
 # macOS
 .DS_Store

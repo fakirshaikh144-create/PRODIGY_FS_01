@@ -2,8 +2,6 @@ node_modules/
 /.next
 /.next/
 /out
-/out/
-.env.local
-.env
+ /out/
 .DS_Store
 .vscode/

@@ -14,8 +14,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Env files
-.env
-.env.*.local
+# (intentionally tracked in repo — do not ignore)
 
 # macOS
 .DS_Store
